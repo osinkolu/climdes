@@ -1,0 +1,10 @@
+Feature Name,Description
+GPA,Grade Point Average on a 5.0 scale
+Skills,Number of programming languages known
+Internship_Success,"Binary target variable (1 for success, 0 for failure)"
+Education_Level,"Education level of the applicant (High School, Bachelors, Masters, PhD)"
+Test_Score,Test score on a scale of 0-100
+Continent,Continent of the applicant
+Internship_Type,"Type of internship (Backend, Frontend, Machine Learning)"
+Farm_Experience,Years of farm-related experience
+Research_Publications,Number of research publications authored
