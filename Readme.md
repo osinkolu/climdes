@@ -44,10 +44,9 @@ This project is part of the CLIMDES internship application and aims to predict t
 - Pandas
 - NumPy
 - Scikit-learn
-- CatBoost (or the chosen machine learning library)
+- CatBoost
 - Optuna (for hyperparameter tuning)
 - Flask (for the API)
-- AWS Elastic Beanstalk (for deployment)
 
 ## Usage
 
@@ -58,13 +57,13 @@ This project is part of the CLIMDES internship application and aims to predict t
    - Deploy the model using Flask on a cloud platform (e.g., AWS Elastic Beanstalk).
 
 3. Making Predictions:
-   - Use the API endpoint (e.g., `/predict`) to send JSON data for predictions.
+   - Use the API endpoint (`/predict`) to send JSON data for predictions.
 
 ## API Endpoint
 
-- Endpoint: http://climdesmltaskx.us-east-1.elasticbeanstalk.com/predict
-- HTTP Method: POST
-- Input Format: JSON with features like GPA, skills, education level, test scores, continent, internship type, farm experience, and research publications.
+- Base URL: http://climdesmltaskx.us-east-1.elasticbeanstalk.com
+- HTTP Methods: POST, GET
+- Input Format for (`/predict`): JSON with features like GPA, skills, education level, test scores, continent, internship type, farm experience, and research publications.
 
 Sample JSON Input:
 ```json
@@ -74,16 +73,16 @@ Sample JSON Input:
     "Internship_Success": 1,
     "Education_Level": "High School",
     "Test_Score": 66,
-    "Continent": "South America",
+    "Continent": "Africa",
     "Internship_Type": "Frontend",
     "Farm_Experience": 9,
-    "Research_Publications": 4
+    "Research_Publications": 0
 }
 ```
 
 Sample JSON Output:
-* 1 - Accepted
-* 0 - Not Accepted
+* 1 - Accepted or successful
+* 0 - Not Accepted or Not successful
 
 ```json
 {
