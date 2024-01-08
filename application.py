@@ -28,7 +28,7 @@ with open('catboost_internship_model.pkl', 'rb') as model_file:
 application = Flask(__name__)
 @application.route('/')
 def index():
-    return("Welcome, please smile more.😉 - Note: Source codes belong to Olufemi Victor (AKA Professor). This was created for the CLIMDES Internship, the /predict endpoint works")
+    return("Welcome, please smile more.😉 - Note: Source codes belong to Olufemi Victor (AKA Professor). This was created for the CLIMDES Internship and uses AWS Code pipelines for deployment, the /predict endpoint works")
 
 @application.route("/predict", methods=["GET", "POST"])
 def predict():
